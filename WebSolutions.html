@@ -12,11 +12,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 40px;
+    padding: 15px 40px;
     background: #0d6efd;
     color: white;
 }
@@ -29,95 +30,136 @@ nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* HERO */
 .hero {
     position: relative;
     height: 450px;
     overflow: hidden;
 }
 
-.hero-img {
+.hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Dark overlay for readability */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,0.6);
 }
 
-/* Content */
 .hero-content {
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
     color: white;
-    max-width: 500px;
 }
 
 .hero-content h1 {
     font-size: 42px;
-    margin-bottom: 10px;
 }
 
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: #25D366;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
+/* GENERAL */
 .container {
     padding: 40px;
 }
 
-.services {
+/* SERVICES */
+.services, .portfolio, .pricing, .testimonials {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
+.card, .portfolio-card, .price-card, .testimonial-card {
     flex: 1;
     min-width: 250px;
-    padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
+    padding: 20px;
 }
 
+/* SERVICES */
+.card {
+    border: 1px solid #ddd;
+}
+
+/* PORTFOLIO */
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* PRICING */
+.price-card {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.price-card h2 {
+    color: #0d6efd;
+}
+
+.popular {
+    border: 2px solid #0d6efd;
+}
+
+/* TESTIMONIAL */
+.testimonial-card {
+    background: #f9f9f9;
+    border-left: 4px solid #0d6efd;
+}
+
+/* BUTTON */
+.btn {
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* FOOTER */
 footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 15px;
 }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    text-decoration: none;
+}
 </style>
 
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="NextGen Logo">
+    <img src="logo.png">
     <nav>
         <a href="#">Home</a>
         <a href="#">Services</a>
@@ -125,48 +167,100 @@ footer {
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
+    <img src="banner.png">
     <div class="hero-overlay"></div>
-
-    <img src="banner.png" class="hero-img">
 
     <div class="hero-content">
         <h1>We Build. You Grow.</h1>
-        <p>Helping Local Businesses in Hyderabad Grow Online</p>
-        <a class="btn" href="https://wa.me/919504826013">Contact on WhatsApp</a>
+        <p>Helping Local Businesses Grow Online</p>
+        <a class="btn" href="https://wa.me/919504826013">Contact</a>
     </div>
 </section>
 
+<!-- SERVICES -->
 <section class="container">
-    <h2>Our Services</h2>
-
+    <h2>Services</h2>
     <div class="services">
-        <div class="card">
-            <h3>Website Development</h3>
-            <p>Professional websites for your business.</p>
-        </div>
+        <div class="card"><h3>Website Development</h3></div>
+        <div class="card"><h3>Google Business Setup</h3></div>
+        <div class="card"><h3>SEO Optimization</h3></div>
+    </div>
+</section>
 
-        <div class="card">
-            <h3>Google Business Setup</h3>
-            <p>Get your business visible on Google.</p>
+<!-- PORTFOLIO -->
+<section class="container">
+    <h2>Our Work</h2>
+    <div class="portfolio">
+        <div class="portfolio-card">
+            <img src="demo1.png">
+            <h3>Restaurant Website</h3>
         </div>
-
-        <div class="card">
-            <h3>SEO Optimization</h3>
-            <p>Improve your ranking and reach more customers.</p>
+        <div class="portfolio-card">
+            <img src="demo2.png">
+            <h3>Salon Website</h3>
+        </div>
+        <div class="portfolio-card">
+            <img src="demo3.png">
+            <h3>Medical Store</h3>
         </div>
     </div>
 </section>
 
+<!-- PRICING -->
+<section class="container">
+    <h2>Pricing</h2>
+    <div class="pricing">
+        <div class="price-card">
+            <h3>Basic</h3>
+            <h2>₹5,999</h2>
+            <p>3 Pages Website</p>
+        </div>
+
+        <div class="price-card popular">
+            <h3>Standard</h3>
+            <h2>₹9,999</h2>
+            <p>5 Pages + Google Setup</p>
+        </div>
+
+        <div class="price-card">
+            <h3>Premium</h3>
+            <h2>₹14,999</h2>
+            <p>Advanced Features</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="container">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <p>Great service, got more customers!</p>
+        </div>
+        <div class="testimonial-card">
+            <p>Affordable and professional.</p>
+        </div>
+        <div class="testimonial-card">
+            <p>Highly recommended.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
 <section class="container">
     <h2>Contact</h2>
     <p>Phone: +91 95048 26013</p>
-    <a class="btn" href="https://wa.me/919504826013">Chat Now</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 NextGen Web Solutions</p>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919504826013" class="whatsapp-float">💬</a>
 
 </body>
 </html>
