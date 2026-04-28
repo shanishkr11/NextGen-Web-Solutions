@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NextGen Web Solutions</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+header img { height: 40px; }
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover { opacity: 0.7; }
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    animation: fadeUp 1s ease;
+}
+.hero-content h1 { font-size: 42px; }
+
+.btn {
+    background: #25D366;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* SECTIONS */
+.container {
+    padding: 50px;
+}
+
+/* CARDS */
+.services, .portfolio, .pricing, .testimonials {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card, .portfolio-card, .price-card, .testimonial-card {
+    flex: 1;
+    min-width: 250px;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card:hover, .portfolio-card:hover, .price-card:hover {
+    transform: translateY(-8px);
+}
+
+/* PORTFOLIO */
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* PRICING */
+.price-card h2 { color: #0d6efd; }
+.popular {
+    border: 2px solid #0d6efd;
+    transform: scale(1.05);
+}
+
+/* TESTIMONIAL */
+.testimonial-card {
+    border-left: 4px solid #0d6efd;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    header { flex-direction: column; text-align:center; }
+    .hero-content { left: 5%; right: 5%; text-align:center; }
+    .hero-content h1 { font-size: 28px; }
+    .container { padding: 20px; }
+    .services, .portfolio, .pricing, .testimonials { flex-direction: column; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="banner.png">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>We Build. You Grow.</h1>
+        <p>Helping Local Businesses Grow Online</p>
+        <a class="btn" href="https://wa.me/919504826013">Contact</a>
+    </div>
+</section>
+
+<section class="container">
+<h2>Services</h2>
+<div class="services">
+<div class="card">Website Development</div>
+<div class="card">Google Setup</div>
+<div class="card">SEO</div>
+</div>
+</section>
+
+<section class="container">
+<h2>Portfolio</h2>
+<div class="portfolio">
+<div class="portfolio-card"><img src="demo1.png"><h3>Restaurant</h3></div>
+<div class="portfolio-card"><img src="demo2.png"><h3>Salon</h3></div>
+<div class="portfolio-card"><img src="demo3.png"><h3>Medical</h3></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Pricing</h2>
+<div class="pricing">
+<div class="price-card"><h3>Basic</h3><h2>₹5,999</h2></div>
+<div class="price-card popular"><h3>Standard</h3><h2>₹9,999</h2></div>
+<div class="price-card"><h3>Premium</h3><h2>₹14,999</h2></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Testimonials</h2>
+<div class="testimonials">
+<div class="testimonial-card">Great service!</div>
+<div class="testimonial-card">Highly recommended</div>
+<div class="testimonial-card">Very professional</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 NextGen Web Solutions</p>
+</footer>
+
+<a href="https://wa.me/919504826013" class="whatsapp-float">💬</a>
+
+</body>
+</html>
