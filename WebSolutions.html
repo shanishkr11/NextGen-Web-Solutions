@@ -32,14 +32,30 @@ nav a {
 }
 
 .hero {
-    background: url('banner.png') no-repeat center/cover;
-    color: white;
+    position: relative;
+    height: 400px;
+    background: url('banner.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 100px 20px;
+    color: white;
 }
 
-.hero h1 {
-    font-size: 40px;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+}
+
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 1;
 }
 
 .btn {
