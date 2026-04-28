@@ -33,37 +33,53 @@ nav a {
 
 .hero {
     position: relative;
-    height: 400px;
-    background: url('banner.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    height: 450px;
+    overflow: hidden;
 }
 
-.hero::before {
-    content: "";
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5); /* dark overlay */
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.hero h1, .hero p, .hero a {
-    position: relative;
-    z-index: 1;
+/* Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .btn {
     background: #25D366;
-    padding: 10px 20px;
+    padding: 12px 20px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 .container {
@@ -105,9 +121,15 @@ footer {
 </header>
 
 <section class="hero">
-    <h1>We Build. You Grow.</h1>
-    <p>Helping Local Businesses Grow Online</p>
-    <a class="btn" href="https://wa.me/919504826013">Contact on WhatsApp</a>
+    <div class="hero-overlay"></div>
+
+    <img src="banner.png" class="hero-img">
+
+    <div class="hero-content">
+        <h1>We Build. You Grow.</h1>
+        <p>Helping Local Businesses in Hyderabad Grow Online</p>
+        <a class="btn" href="https://wa.me/919504826013">Contact on WhatsApp</a>
+    </div>
 </section>
 
 <section class="container">
