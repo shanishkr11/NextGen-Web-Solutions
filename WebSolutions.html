@@ -151,6 +151,54 @@ footer {
     font-size: 30px;
     text-decoration: none;
 }
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero-content {
+        left: 5%;
+        right: 5%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .services,
+    .portfolio,
+    .pricing,
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .card,
+    .portfolio-card,
+    .price-card,
+    .testimonial-card {
+        width: 100%;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
 </style>
 
 </head>
