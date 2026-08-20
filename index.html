@@ -193,13 +193,13 @@ footer {
 <header>
     <img src="logo.png" alt="NextGen Web Solutions logo">
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
     <img src="banner.png" alt="Web design services for local businesses">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -209,7 +209,7 @@ footer {
     </div>
 </section>
 
-<section class="container">
+<section class="container" id="services">
 <h2>Services</h2>
     <div class="services">
         <div class="card">
@@ -298,12 +298,13 @@ footer {
 </div>
 </section>
 
-<footer>
+<footer id="contact">
 <p>© 2026 NextGen Web Solutions</p>
+<p>📞 <a href="tel:+919504826013" style="color:#fff;">9504826013</a> | 💬 <a href="https://wa.me/919504826013" style="color:#fff;">WhatsApp Us</a></p>
 </footer>
 
-<a href="tel:+919504826013" class="call-float">📞</a>
-<a href="https://wa.me/919504826013" class="whatsapp-float">💬</a>
+<a href="tel:+919504826013" class="call-float" aria-label="Call us">📞</a>
+<a href="https://wa.me/919504826013" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
 
 </body>
 </html>
